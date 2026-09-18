@@ -1,10 +1,10 @@
 # Nexus RAG — Multi-stage PDF Q&A
 
-A from-scratch **Python / LangChain / Qdrant / Groq / FastAPI / Streamlit** project. Upload a text-based PDF, inspect chunks, compare retrieval methods, and stream an answer with source/page references. This is a local portfolio implementation, not a publicly deployed or production-certified service.
+A from-scratch **Python / LangChain / Qdrant / Groq / FastAPI / Streamlit** project. Upload a text-based PDF locally, inspect chunks, compare retrieval methods, and stream an answer with source/page references. A sample-only portfolio demo is deployed online; this is not a production-certified service.
 
 ## Start on this computer
 
-Public source: [Rahil97-air/nexus-rag-python](https://github.com/Rahil97-air/nexus-rag-python). The sample-only cloud entrypoint is `portfolio_app.py`; see [deployment and privacy boundaries](docs/DEPLOYMENT.md). Online deployment is pending verification.
+**[Open the live demo](https://rahil97-nexus-rag.streamlit.app/)** · [Public source](https://github.com/Rahil97-air/nexus-rag-python). The sample-only cloud entrypoint is `portfolio_app.py`; see [deployment and privacy boundaries](docs/DEPLOYMENT.md). Index the fictional handbook, then search without a key. Advanced retrieval and answers require your own Groq key and consent.
 
 Double-click **Start Nexus.cmd** in this folder, or run:
 
