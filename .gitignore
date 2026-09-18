@@ -1,0 +1,10 @@
+.venv/
+.env
+.data/
+.api-data/
+.demo-data/
+.cache/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+test-results/
