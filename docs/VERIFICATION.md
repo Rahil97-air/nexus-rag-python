@@ -2,7 +2,7 @@
 
 ## Final local feature verification — 18 September 2026
 
-Deployment preparation: **27 automated tests passed**, including a public-entrypoint test that verifies uploads and local API controls are absent and an owner environment key is not used. Windows-only dependencies have platform markers. Cloud/Linux installation and the hosted application have not yet been verified.
+Deployment verification: **27 automated tests passed**, including a public-entrypoint test that verifies uploads and local API controls are absent and an owner environment key is not used. Windows-only dependencies have platform markers. Streamlit Community Cloud successfully built and started the Python 3.12 public entrypoint. Hosted model initialization, three-page indexing and baseline retrieval passed: the expense-claim question ranked the supporting page first (similarity 0.851). Hosted Groq generation remains untested; the live checks below were local. GitHub's recursive tree contains exactly the 37 intended source/sample files, matching the local file hashes.
 
 **26 automated tests passed** on the final feature implementation. They cover PDF extraction, stable IDs, persistence, document filtering, deduplication, MMR diversity, query reformulation orchestration, reranking validation/fallbacks, stream ordering/errors, source labels, input/body limits, consent, secret-safe errors, API upload/search, duplicate upload handling, and UI indexing/search/stale-result handling. Mocked providers are used for deterministic offline tests; they do not establish live LLM quality.
 

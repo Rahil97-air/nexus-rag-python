@@ -2,7 +2,9 @@
 
 Source: https://github.com/Rahil97-air/nexus-rag-python
 
-Deployment target: Streamlit Community Cloud, branch `main`, entrypoint `portfolio_app.py`, Python 3.12. Deployment is pending account sign-in and a successful cloud build; no live URL is claimed yet.
+Live demo: https://rahil97-nexus-rag.streamlit.app/
+
+Deployed on Streamlit Community Cloud, branch `main`, entrypoint `portfolio_app.py`, Python 3.12. Verified on 18 September 2026: the app starts, downloads the embedding model, indexes the three-page fictional handbook, and retrieves the expense deadline passage as the first result with page attribution. Live Groq generation was verified locally; no owner key was copied to the hosted demo and hosted Groq generation has not been tested.
 
 The public entrypoint uses only the bundled fictional handbook. Arbitrary uploads and the local REST developer panel are disabled. Its embedded index is separate from the full local app. Visitors supply their own session-only Groq key for advanced retrieval and generation; owner environment keys are ignored. Do not add an owner's API key to hosting secrets. Baseline/MMR retrieval requires no key.
 
