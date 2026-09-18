@@ -71,7 +71,7 @@ The first embedding use downloads the public model; embeddings then run locally.
 .\.venv\Scripts\python.exe scripts/evaluate_extended.py
 ```
 
-All **26 automated tests passed**. Unit tests use fake providers/vectors where appropriate. The live UI and REST/SSE multi-stage smoke tests also passed. Retrieval scripts use the real embedding model, without Groq. The extended synthetic fixture has eight pages and 16 chunks. At k=3, complete-evidence counts were **22/24 baseline** and **21/24 MMR**. This is not a held-out accuracy benchmark or a resume-ready performance claim.
+All **27 automated tests passed**. Unit tests use fake providers/vectors where appropriate. The local live UI and REST/SSE multi-stage smoke tests also passed. Hosted indexing, baseline and MMR retrieval passed; hosted Groq generation has not been tested. Retrieval scripts use the real embedding model, without Groq. The extended synthetic fixture has eight pages and 16 chunks. At k=3, complete-evidence counts were **22/24 baseline** and **21/24 MMR**. This is not a held-out accuracy benchmark or a resume-ready performance claim.
 
 The app's **Developer checks: REST API and streaming** panel runs a consent-controlled live API test using the fictional sample. It reports stage status, streamed token events and citations without copying the key into the report.
 
@@ -93,7 +93,7 @@ The app's **Developer checks: REST API and streaming** panel runs a consent-cont
 
 ## Boundaries
 
-- **Local single-user project.** No public hosting, production authentication or scale guarantees. Do not expose the ports publicly.
+- **Full app/API: local single-user project.** Only the sample-only portfolio entrypoint is publicly hosted. No production authentication or scale guarantees. Do not expose the full local app/API ports publicly.
 - The UI uses `.data/`; the API uses `.api-data/`. They share pipeline code but have independent indexes. Upload/index in each interface you use. Embedded Qdrant requires one owning process per directory.
 - Text-based English PDFs are the target. OCR, image understanding and reliable complex-table parsing are not included or claimed in the supplied resume.
 - Similarity is **not confidence**. With query rewriting it may be the highest score across variants, not a reranker score.
